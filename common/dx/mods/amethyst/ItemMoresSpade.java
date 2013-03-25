@@ -21,9 +21,4 @@ public class ItemMoresSpade extends ItemSpade
     {
         return par1Block == Block.snow ? true : par1Block == Block.blockSnow;
     }
-    
-    public String getTextureFile()
-    {
-            return "/tex/dxmods/amethyst/items0.png";
-    }
 }

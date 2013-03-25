@@ -27,9 +27,4 @@ public class ItemPowder extends Item
                 	setPotionEffect(PotionHelper.field_77924_a);
                 }
         }
-        
-        public String getTextureFile()
-        {
-                return "/tex/dxmods/amethyst/items0.png";
-        }
 }

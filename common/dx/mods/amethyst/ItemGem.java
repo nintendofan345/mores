@@ -21,9 +21,4 @@ public class ItemGem extends Item
         public ItemGem(int par1) {
         	this(par1, 0);
         }
-        
-        public String getTextureFile()
-        {
-                return "/tex/dxmods/amethyst/items0.png";
-        }
 }

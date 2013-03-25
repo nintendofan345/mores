@@ -8,12 +8,7 @@ public class BlockBlockOre extends Block {
 
 	public BlockBlockOre(int par1, int par2)
     {
-        super(par1, par2, Material.rock);
+        super(par1, Material.rock);
         this.setCreativeTab(CreativeTabs.tabBlock);
-    }
-	
-	public String getTextureFile()
-    {
-            return "/tex/dxmods/amethyst/blocks0.png";
     }
 }

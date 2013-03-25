@@ -24,9 +24,4 @@ public class ItemMoresAxe extends ItemAxe
     {
         return par2Block != null && (par2Block.blockMaterial == Material.wood || par2Block.blockMaterial == Material.plants || par2Block.blockMaterial == Material.vine) ? this.efficiencyOnProperMaterial : super.getStrVsBlock(par1ItemStack, par2Block);
     }
-    
-    public String getTextureFile()
-    {
-            return "/tex/dxmods/amethyst/items0.png";
-    }
 }

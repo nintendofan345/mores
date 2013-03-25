@@ -68,7 +68,7 @@ public class ItemMoresHoe extends ItemHoe
                 }
                 else
                 {
-                    par3World.setBlockWithNotify(par4, par5, par6, var13.blockID);
+                    par3World.notifyBlockChange(par4, par5, par6, var13.blockID);
                     par1ItemStack.damageItem(1, par2EntityPlayer);
                     return true;
                 }
@@ -89,10 +89,5 @@ public class ItemMoresHoe extends ItemHoe
     public String func_77842_f()
     {
         return this.theToolMaterial.toString();
-    }
-    
-    public String getTextureFile()
-    {
-            return "/tex/dxmods/amethyst/items0.png";
     }
 }

@@ -8,9 +8,4 @@ public class ItemIcon extends Item
         {
             super(par1);
         }
-        
-        public String getTextureFile()
-        {
-                return "/tex/dxmods/amethyst/blocks0.png";
-        }
 }

@@ -59,7 +59,7 @@ public class ItemRockCandy extends ItemFood
         }
     }
 
-    public ItemStack onFoodEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
+    public ItemStack onEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
         --par1ItemStack.stackSize;
         par3EntityPlayer.getFoodStats().addStats(this);
@@ -147,10 +147,5 @@ public class ItemRockCandy extends ItemFood
     {
         this.alwaysEdible = true;
         return this;
-    }
-    
-    public String getTextureFile()
-    {
-            return "/tex/dxmods/amethyst/items0.png";
     }
 }

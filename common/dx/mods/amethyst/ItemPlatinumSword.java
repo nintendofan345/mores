@@ -12,6 +12,6 @@ public class ItemPlatinumSword extends ItemMoresSword {
 	
 	public EnumRarity getRarity(ItemStack par1ItemStack)
     {
-        return par1ItemStack.itemID == mod_Amethyst.platinumLapisSword.shiftedIndex ? EnumRarity.epic : EnumRarity.epic;
+        return par1ItemStack.itemID == mod_Amethyst.platinumLapisSword.itemID ? EnumRarity.epic : EnumRarity.epic;
     }
 }

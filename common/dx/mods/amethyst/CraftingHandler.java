@@ -11,7 +11,7 @@ public class CraftingHandler implements ICraftingHandler
         @Override
         public void onCrafting(EntityPlayer player, ItemStack item, IInventory craftMatrix) 
         {
-                if (item.itemID == mod_Amethyst.gemAlloyIngot.shiftedIndex)
+                if (item.itemID == mod_Amethyst.gemAlloyIngot.itemID)
                 {
                         player.addStat(mod_Amethyst.gemStackAch, 1);
                 }
@@ -22,28 +22,28 @@ public class CraftingHandler implements ICraftingHandler
         @Override
         public void onSmelting(EntityPlayer player, ItemStack item) 
         {
-        	if (item.itemID == mod_Amethyst.amethyst.shiftedIndex)
+        	if (item.itemID == mod_Amethyst.amethyst.itemID)
         	{
                     player.addStat(mod_Amethyst.amethystAchieve, 1);
             }
-        	if (item.itemID == mod_Amethyst.peridot.shiftedIndex)
+        	if (item.itemID == mod_Amethyst.peridot.itemID)
         	{
                     player.addStat(mod_Amethyst.peridotAchieve, 1);
             }
-        	if (item.itemID == mod_Amethyst.garnet.shiftedIndex)
+        	if (item.itemID == mod_Amethyst.garnet.itemID)
         	{
                     player.addStat(mod_Amethyst.garnetAchieve, 1);
             }
         	
-        	if (item.itemID == mod_Amethyst.amethystIngot.shiftedIndex)
+        	if (item.itemID == mod_Amethyst.amethystIngot.itemID)
             {
                     player.addStat(mod_Amethyst.temperAmethystAch, 1);
             }
-        	if (item.itemID == mod_Amethyst.peridotIngot.shiftedIndex)
+        	if (item.itemID == mod_Amethyst.peridotIngot.itemID)
             {
                     player.addStat(mod_Amethyst.temperPeridotAch, 1);
             }
-            if (item.itemID == mod_Amethyst.garnetIngot.shiftedIndex)
+            if (item.itemID == mod_Amethyst.garnetIngot.itemID)
             {
                     player.addStat(mod_Amethyst.temperGarnetAch, 1);
             }

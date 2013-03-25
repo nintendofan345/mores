@@ -11,15 +11,15 @@ public class MoresEventHooks {
 	
 	@ForgeSubscribe
 	public void onItemPickup (EntityItemPickupEvent par1) {
-		this.item = par1.item.func_92014_d();
+		this.item = par1.item.getEntityItem();
 		
-		if (this.item.itemID == mod_Amethyst.amethyst.shiftedIndex) {
+		if (this.item.itemID == mod_Amethyst.amethyst.itemID) {
 			player.triggerAchievement(mod_Amethyst.amethystAchieve);
 		}
-		if (this.item.itemID == mod_Amethyst.peridot.shiftedIndex) {
+		if (this.item.itemID == mod_Amethyst.peridot.itemID) {
 			player.triggerAchievement(mod_Amethyst.peridotAchieve);
 		}
-		if (this.item.itemID == mod_Amethyst.garnet.shiftedIndex) {
+		if (this.item.itemID == mod_Amethyst.garnet.itemID) {
 			player.triggerAchievement(mod_Amethyst.garnetAchieve);
 		}
 	}

@@ -12,23 +12,23 @@ public class BlockItemOre extends Block {
 	
 	public BlockItemOre(int par1, int par2, int par3)
     {
-        super(par1, par2, Material.rock);
+        super(par1, Material.rock);
         this.setCreativeTab(CreativeTabs.tabBlock);
         i = par3;
     }
 	
 	public int idDropped(int par1, Random par2Random, int par3) {
 		if (i == 0) {
-			return mod_Amethyst.amethyst.shiftedIndex;
+			return mod_Amethyst.amethyst.itemID;
 		}
 		if (i == 1) {
-			return mod_Amethyst.peridot.shiftedIndex;
+			return mod_Amethyst.peridot.itemID;
 		}
 		if (i == 2) {
-			return mod_Amethyst.garnet.shiftedIndex;
+			return mod_Amethyst.garnet.itemID;
 		}
 		if (i == 3) {
-			return Item.lightStoneDust.shiftedIndex;
+			return Item.lightStoneDust.itemID;
 		}
 		return 0;
 	}
@@ -39,10 +39,5 @@ public class BlockItemOre extends Block {
 			return 1 + par1Random.nextInt(2);
 		}
         return 1;
-    }
-	
-	public String getTextureFile()
-    {
-            return "/tex/dxmods/amethyst/blocks0.png";
     }
 }

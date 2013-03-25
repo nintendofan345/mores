@@ -54,13 +54,13 @@ public class mod_Amethyst {
 	public static Block garnetBlock;
 	
 	//Gem Biome Block Definitions
-	public static Block gemSand;
+	/*public static Block gemSand;
 	public static Block gemDirt;
 	public static Block gemGrass;
 	public static Block gemLog;
 	public static Block gemLeaves;
 	public static Block gemSapling;
-	public static Block gemTallGrass;
+	public static Block gemTallGrass;*/
 	
 	//Metal Ores and Solids Definitions
 	public static Block osmiumOre;
@@ -95,13 +95,13 @@ public class mod_Amethyst {
 		amethystBlockID = config.getBlock("amethystBlockID", 2283).getInt();
 		peridotBlockID = config.getBlock("peridotBlockID", 2284).getInt();
 		garnetBlockID = config.getBlock("garnetBlockID", 2285).getInt();
-		sandGemID = config.getTerrainBlock(Configuration.CATEGORY_BLOCK, "gemSandID", 234, null).getInt();
+		/*sandGemID = config.getTerrainBlock(Configuration.CATEGORY_BLOCK, "gemSandID", 234, null).getInt();
 		dirtGemID = config.getTerrainBlock(Configuration.CATEGORY_BLOCK, "gemDirtID", 235, null).getInt();
 		grassGemID = config.getTerrainBlock(Configuration.CATEGORY_BLOCK, "gemGrassID", 236, null).getInt();
 		logGemID = config.getBlock("gemLogID", 2286).getInt();
 		leafGemID = config.getBlock("gemLeavesID", 2287).getInt();
 		saplingGemID = config.getBlock("gemSaplingID", 2288).getInt();
-		tallgrassGemID = config.getBlock("gemTallGrassID", 2289).getInt();
+		tallgrassGemID = config.getBlock("gemTallGrassID", 2289).getInt();*/
 		osmiumOreID = config.getBlock("osmiumOreID", 2290).getInt();
 		osmiumBlockID = config.getBlock("osmiumBlockID", 2291).getInt();
 		beryllaniumOreID = config.getBlock("beryllaniumOreID", 2292).getInt();
@@ -124,13 +124,13 @@ public class mod_Amethyst {
 		peridotBlock = (new BlockOreSolid(peridotBlockID, 2)).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("blockPeridot").setStepSound(Block.soundMetalFootstep);
 		garnetBlock = (new BlockOreSolid(garnetBlockID, 4)).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("blockGarnet").setStepSound(Block.soundMetalFootstep);
 		
-		gemSand = (new BlockGemSand(sandGemID, 12)).setHardness(0.5F).setUnlocalizedName("sandGem").setStepSound(Block.soundSandFootstep);
+		/*gemSand = (new BlockGemSand(sandGemID, 12)).setHardness(0.5F).setUnlocalizedName("sandGem").setStepSound(Block.soundSandFootstep);
 		gemDirt = (new BlockGemDirt(dirtGemID, 6)).setHardness(0.5F).setUnlocalizedName("dirtGem").setStepSound(Block.soundGravelFootstep);
 		gemGrass = (new BlockGemGrass(grassGemID, 8)).setHardness(0.5F).setUnlocalizedName("grassGem").setStepSound(Block.soundGrassFootstep);
 		gemLog = (new BlockGemLog(logGemID)).setHardness(1.0F).setUnlocalizedName("logGem").setCreativeTab(CreativeTabs.tabBlock);
 		gemLeaves = (new BlockGemLeaves(leafGemID, 9)).setHardness(1.0F).setStepSound(Block.soundGrassFootstep).setResistance(1.0F).setUnlocalizedName("leavesGem").setCreativeTab(CreativeTabs.tabDecorations);
 		gemSapling = (new BlockGemSapling(saplingGemID, 13)).setStepSound(Block.soundGrassFootstep).setHardness(0.0F).setUnlocalizedName("saplingGem").setCreativeTab(CreativeTabs.tabDecorations);
-		gemTallGrass = (new BlockGemGrassTall(tallgrassGemID, 16)).setStepSound(Block.soundGrassFootstep).setHardness(0.0F).setUnlocalizedName("tallGrassGem").setCreativeTab(CreativeTabs.tabDecorations);
+		gemTallGrass = (new BlockGemGrassTall(tallgrassGemID, 16)).setStepSound(Block.soundGrassFootstep).setHardness(0.0F).setUnlocalizedName("tallGrassGem").setCreativeTab(CreativeTabs.tabDecorations);*/
 		
 		osmiumOre = (new BlockBlockOre(osmiumOreID, 14).setHardness(6.0F).setResistance(14.0F).setUnlocalizedName("oreOsmium").setStepSound(Block.soundStoneFootstep));
 		osmiumBlock = (new BlockOreSolid(osmiumBlockID, 18).setHardness(6.0F).setResistance(20.0F).setUnlocalizedName("blockOsmium").setStepSound(Block.soundMetalFootstep));
@@ -158,69 +158,69 @@ public class mod_Amethyst {
 		osmiumIngot = new ItemGem(16542).setIconIndex(115).setUnlocalizedName("osmiumIngot").setCreativeTab(CreativeTabs.tabMaterials);
 		
 		//Tool Definitions
-		amethystSword = new ItemMoresSword(16515, EnumBaseMoresToolMat).setIconCoord(0, 6).setUnlocalizedName("amethystSword").setCreativeTab(CreativeTabs.tabCombat);
-		peridotSword = new ItemMoresSword(16520, EnumBaseMoresToolMat).setIconCoord(1, 6).setUnlocalizedName("peridotSword").setCreativeTab(CreativeTabs.tabCombat);
-		garnetSword = new ItemMoresSword(16525, EnumBaseMoresToolMat).setIconCoord(2, 6).setUnlocalizedName("garnetSword").setCreativeTab(CreativeTabs.tabCombat);
-		amethystShovel = new ItemMoresSpade(16500, EnumBaseMoresToolMat).setIconCoord(0, 5).setUnlocalizedName("amethystShovel").setCreativeTab(CreativeTabs.tabTools);
-		peridotShovel = new ItemMoresSpade(16504, EnumBaseMoresToolMat).setIconCoord(1, 5).setUnlocalizedName("peridotShovel").setCreativeTab(CreativeTabs.tabTools);
-		garnetShovel = new ItemMoresSpade(16508, EnumBaseMoresToolMat).setIconCoord(2, 5).setUnlocalizedName("garnetShovel").setCreativeTab(CreativeTabs.tabTools);
-		amethystPickaxe = new ItemMoresPickaxe(16501, EnumBaseMoresToolMat).setIconCoord(0, 4).setUnlocalizedName("amethystPickaxe").setCreativeTab(CreativeTabs.tabTools);
-		peridotPickaxe = new ItemMoresPickaxe(16505, EnumBaseMoresToolMat).setIconCoord(1, 4).setUnlocalizedName("peridotPickaxe").setCreativeTab(CreativeTabs.tabTools);
-		garnetPickaxe = new ItemMoresPickaxe(16509, EnumBaseMoresToolMat).setIconCoord(2, 4).setUnlocalizedName("garnetPickaxe").setCreativeTab(CreativeTabs.tabTools);
-		amethystAxe = new ItemMoresAxe(16502, EnumBaseMoresToolMat).setIconCoord(0, 2).setUnlocalizedName("amethystAxe").setCreativeTab(CreativeTabs.tabTools);
-		peridotAxe = new ItemMoresAxe(16506, EnumBaseMoresToolMat).setIconCoord(1, 2).setUnlocalizedName("peridotAxe").setCreativeTab(CreativeTabs.tabTools);
-		garnetAxe = new ItemMoresAxe(16510, EnumBaseMoresToolMat).setIconCoord(2, 2).setUnlocalizedName("garnetAxe").setCreativeTab(CreativeTabs.tabTools);
-		amethystHoe = new ItemMoresHoe(16503, EnumBaseMoresToolMat).setIconCoord(0, 3).setUnlocalizedName("amethystHoe").setCreativeTab(CreativeTabs.tabTools);
-		peridotHoe = new ItemMoresHoe(16507, EnumBaseMoresToolMat).setIconCoord(1, 3).setUnlocalizedName("peridotHoe").setCreativeTab(CreativeTabs.tabTools);
-		garnetHoe = new ItemMoresHoe(16511, EnumBaseMoresToolMat).setIconCoord(2, 3).setUnlocalizedName("garnetHoe").setCreativeTab(CreativeTabs.tabTools);
-		alloySword = new ItemMoresSword(16530, EnumAlloyToolMat).setIconCoord(3, 6).setUnlocalizedName("alloySword").setCreativeTab(CreativeTabs.tabCombat);
-		alloyShovel = new ItemMoresSpade(16531, EnumAlloyToolMat).setIconCoord(3, 5).setUnlocalizedName("alloyShovel").setCreativeTab(CreativeTabs.tabTools);
-		alloyPickaxe = new ItemMoresPickaxe(16532, EnumAlloyToolMat).setIconCoord(3, 4).setUnlocalizedName("alloyPickaxe").setCreativeTab(CreativeTabs.tabTools);
-		alloyAxe = new ItemMoresAxe(16533, EnumAlloyToolMat).setIconCoord(3, 2).setUnlocalizedName("alloyAxe").setCreativeTab(CreativeTabs.tabTools);
-		alloyHoe = new ItemMoresHoe(16534, EnumAlloyToolMat).setIconCoord(3, 3).setUnlocalizedName("alloyHoe").setCreativeTab(CreativeTabs.tabTools);
-		osmiumSword = new ItemMoresSword(17000, EnumOsmiumToolMat).setIconCoord(0, 8).setUnlocalizedName("osmiumSword").setCreativeTab(CreativeTabs.tabCombat);
-		osmiumShovel = new ItemMoresSpade(17001, EnumOsmiumToolMat).setIconCoord(0, 9).setUnlocalizedName("osmiumShovel").setCreativeTab(CreativeTabs.tabTools);
-		osmiumPickaxe = new ItemMoresPickaxe(17002, EnumOsmiumToolMat).setIconCoord(0, 10).setUnlocalizedName("osmiumPickaxe").setCreativeTab(CreativeTabs.tabTools);
-		osmiumAxe = new ItemMoresAxe(17003, EnumOsmiumToolMat).setIconCoord(0, 11).setUnlocalizedName("osmiumAxe").setCreativeTab(CreativeTabs.tabTools);
-		osmiumHoe = new ItemMoresHoe(17004, EnumOsmiumToolMat).setIconCoord(0, 12).setUnlocalizedName("osmiumHoe").setCreativeTab(CreativeTabs.tabTools);
+		amethystSword = new ItemMoresSword(16515, EnumBaseMoresToolMat)0, 6).setUnlocalizedName("amethystSword").setCreativeTab(CreativeTabs.tabCombat);
+		peridotSword = new ItemMoresSword(16520, EnumBaseMoresToolMat)1, 6).setUnlocalizedName("peridotSword").setCreativeTab(CreativeTabs.tabCombat);
+		garnetSword = new ItemMoresSword(16525, EnumBaseMoresToolMat)2, 6).setUnlocalizedName("garnetSword").setCreativeTab(CreativeTabs.tabCombat);
+		amethystShovel = new ItemMoresSpade(16500, EnumBaseMoresToolMat)0, 5).setUnlocalizedName("amethystShovel").setCreativeTab(CreativeTabs.tabTools);
+		peridotShovel = new ItemMoresSpade(16504, EnumBaseMoresToolMat)1, 5).setUnlocalizedName("peridotShovel").setCreativeTab(CreativeTabs.tabTools);
+		garnetShovel = new ItemMoresSpade(16508, EnumBaseMoresToolMat)2, 5).setUnlocalizedName("garnetShovel").setCreativeTab(CreativeTabs.tabTools);
+		amethystPickaxe = new ItemMoresPickaxe(16501, EnumBaseMoresToolMat)0, 4).setUnlocalizedName("amethystPickaxe").setCreativeTab(CreativeTabs.tabTools);
+		peridotPickaxe = new ItemMoresPickaxe(16505, EnumBaseMoresToolMat)1, 4).setUnlocalizedName("peridotPickaxe").setCreativeTab(CreativeTabs.tabTools);
+		garnetPickaxe = new ItemMoresPickaxe(16509, EnumBaseMoresToolMat)2, 4).setUnlocalizedName("garnetPickaxe").setCreativeTab(CreativeTabs.tabTools);
+		amethystAxe = new ItemMoresAxe(16502, EnumBaseMoresToolMat)0, 2).setUnlocalizedName("amethystAxe").setCreativeTab(CreativeTabs.tabTools);
+		peridotAxe = new ItemMoresAxe(16506, EnumBaseMoresToolMat)1, 2).setUnlocalizedName("peridotAxe").setCreativeTab(CreativeTabs.tabTools);
+		garnetAxe = new ItemMoresAxe(16510, EnumBaseMoresToolMat)2, 2).setUnlocalizedName("garnetAxe").setCreativeTab(CreativeTabs.tabTools);
+		amethystHoe = new ItemMoresHoe(16503, EnumBaseMoresToolMat)0, 3).setUnlocalizedName("amethystHoe").setCreativeTab(CreativeTabs.tabTools);
+		peridotHoe = new ItemMoresHoe(16507, EnumBaseMoresToolMat)1, 3).setUnlocalizedName("peridotHoe").setCreativeTab(CreativeTabs.tabTools);
+		garnetHoe = new ItemMoresHoe(16511, EnumBaseMoresToolMat)2, 3).setUnlocalizedName("garnetHoe").setCreativeTab(CreativeTabs.tabTools);
+		alloySword = new ItemMoresSword(16530, EnumAlloyToolMat)3, 6).setUnlocalizedName("alloySword").setCreativeTab(CreativeTabs.tabCombat);
+		alloyShovel = new ItemMoresSpade(16531, EnumAlloyToolMat)3, 5).setUnlocalizedName("alloyShovel").setCreativeTab(CreativeTabs.tabTools);
+		alloyPickaxe = new ItemMoresPickaxe(16532, EnumAlloyToolMat)3, 4).setUnlocalizedName("alloyPickaxe").setCreativeTab(CreativeTabs.tabTools);
+		alloyAxe = new ItemMoresAxe(16533, EnumAlloyToolMat)3, 2).setUnlocalizedName("alloyAxe").setCreativeTab(CreativeTabs.tabTools);
+		alloyHoe = new ItemMoresHoe(16534, EnumAlloyToolMat)3, 3).setUnlocalizedName("alloyHoe").setCreativeTab(CreativeTabs.tabTools);
+		osmiumSword = new ItemMoresSword(17000, EnumOsmiumToolMat)0, 8).setUnlocalizedName("osmiumSword").setCreativeTab(CreativeTabs.tabCombat);
+		osmiumShovel = new ItemMoresSpade(17001, EnumOsmiumToolMat)0, 9).setUnlocalizedName("osmiumShovel").setCreativeTab(CreativeTabs.tabTools);
+		osmiumPickaxe = new ItemMoresPickaxe(17002, EnumOsmiumToolMat)0, 10).setUnlocalizedName("osmiumPickaxe").setCreativeTab(CreativeTabs.tabTools);
+		osmiumAxe = new ItemMoresAxe(17003, EnumOsmiumToolMat)0, 11).setUnlocalizedName("osmiumAxe").setCreativeTab(CreativeTabs.tabTools);
+		osmiumHoe = new ItemMoresHoe(17004, EnumOsmiumToolMat)0, 12).setUnlocalizedName("osmiumHoe").setCreativeTab(CreativeTabs.tabTools);
 		
 		//Armor Definitions
-		amethystHelmet = new ItemMoresArmor(16516, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 0).setIconCoord(4, 0).setUnlocalizedName("amethystHelmet").setCreativeTab(CreativeTabs.tabCombat);
-		amethystPlate = new ItemMoresArmor(16517, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 1).setIconCoord(4, 1).setUnlocalizedName("amethystPlate").setCreativeTab(CreativeTabs.tabCombat);
-		amethystLeggings = new ItemMoresArmor(16518, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 2).setIconCoord(4, 2).setUnlocalizedName("amethystLeggings").setCreativeTab(CreativeTabs.tabCombat);
-		amethystBoots = new ItemMoresArmor(16519, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 3).setIconCoord(4, 3).setUnlocalizedName("amethystBoots").setCreativeTab(CreativeTabs.tabCombat);
-		peridotHelmet = new ItemMoresArmor(16521, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 0).setIconCoord(5, 0).setUnlocalizedName("peridotHelmet").setCreativeTab(CreativeTabs.tabCombat);
-		peridotPlate = new ItemMoresArmor(16522, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 1).setIconCoord(5, 1).setUnlocalizedName("peridotPlate").setCreativeTab(CreativeTabs.tabCombat);
-		peridotLeggings = new ItemMoresArmor(16523, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 2).setIconCoord(5, 2).setUnlocalizedName("peridotLeggings").setCreativeTab(CreativeTabs.tabCombat);
-		peridotBoots = new ItemMoresArmor(16524, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 3).setIconCoord(5, 3).setUnlocalizedName("peridotBoots").setCreativeTab(CreativeTabs.tabCombat);
-		garnetHelmet = new ItemMoresArmor(16526, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 0).setIconCoord(6, 0).setUnlocalizedName("garnetHelmet").setCreativeTab(CreativeTabs.tabCombat);
-		garnetPlate = new ItemMoresArmor(16527, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 1).setIconCoord(6, 1).setUnlocalizedName("garnetPlate").setCreativeTab(CreativeTabs.tabCombat);
-		garnetLeggings = new ItemMoresArmor(16528, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 2).setIconCoord(6, 2).setUnlocalizedName("garnetLeggings").setCreativeTab(CreativeTabs.tabCombat);
-		garnetBoots = new ItemMoresArmor(16529, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 3).setIconCoord(6, 3).setUnlocalizedName("garnetBoots").setCreativeTab(CreativeTabs.tabCombat);
-		alloyHelmet = new ItemMoresArmor(16535, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 0).setIconCoord(7, 0).setUnlocalizedName("alloyHelmet").setCreativeTab(CreativeTabs.tabCombat);
-		alloyPlate = new ItemMoresArmor(16536, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 1).setIconCoord(7, 1).setUnlocalizedName("alloyPlate").setCreativeTab(CreativeTabs.tabCombat);
-		alloyLeggings = new ItemMoresArmor(16537, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 2).setIconCoord(7, 2).setUnlocalizedName("alloyLeggings").setCreativeTab(CreativeTabs.tabCombat);
-		alloyBoots = new ItemMoresArmor(16538, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 3).setIconCoord(7, 3).setUnlocalizedName("alloyBoots").setCreativeTab(CreativeTabs.tabCombat);
-		osmiumHelmet = new ItemMoresArmor(17005, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 0).setIconCoord(8, 0).setUnlocalizedName("osmiumHelmet").setCreativeTab(CreativeTabs.tabCombat);
-		osmiumPlate = new ItemMoresArmor(17006, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 1).setIconCoord(8, 1).setUnlocalizedName("osmiumPlate").setCreativeTab(CreativeTabs.tabCombat);
-		osmiumLeggings = new ItemMoresArmor(17007, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 2).setIconCoord(8, 2).setUnlocalizedName("osmiumLeggings").setCreativeTab(CreativeTabs.tabCombat);
-		osmiumBoots = new ItemMoresArmor(17008, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 3).setIconCoord(8, 3).setUnlocalizedName("osmiumBoots").setCreativeTab(CreativeTabs.tabCombat);
+		amethystHelmet = new ItemMoresArmor(16516, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 0)4, 0).setUnlocalizedName("amethystHelmet").setCreativeTab(CreativeTabs.tabCombat);
+		amethystPlate = new ItemMoresArmor(16517, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 1)4, 1).setUnlocalizedName("amethystPlate").setCreativeTab(CreativeTabs.tabCombat);
+		amethystLeggings = new ItemMoresArmor(16518, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 2)4, 2).setUnlocalizedName("amethystLeggings").setCreativeTab(CreativeTabs.tabCombat);
+		amethystBoots = new ItemMoresArmor(16519, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 3)4, 3).setUnlocalizedName("amethystBoots").setCreativeTab(CreativeTabs.tabCombat);
+		peridotHelmet = new ItemMoresArmor(16521, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 0)5, 0).setUnlocalizedName("peridotHelmet").setCreativeTab(CreativeTabs.tabCombat);
+		peridotPlate = new ItemMoresArmor(16522, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 1)5, 1).setUnlocalizedName("peridotPlate").setCreativeTab(CreativeTabs.tabCombat);
+		peridotLeggings = new ItemMoresArmor(16523, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 2)5, 2).setUnlocalizedName("peridotLeggings").setCreativeTab(CreativeTabs.tabCombat);
+		peridotBoots = new ItemMoresArmor(16524, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 3)5, 3).setUnlocalizedName("peridotBoots").setCreativeTab(CreativeTabs.tabCombat);
+		garnetHelmet = new ItemMoresArmor(16526, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 0)6, 0).setUnlocalizedName("garnetHelmet").setCreativeTab(CreativeTabs.tabCombat);
+		garnetPlate = new ItemMoresArmor(16527, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 1)6, 1).setUnlocalizedName("garnetPlate").setCreativeTab(CreativeTabs.tabCombat);
+		garnetLeggings = new ItemMoresArmor(16528, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 2)6, 2).setUnlocalizedName("garnetLeggings").setCreativeTab(CreativeTabs.tabCombat);
+		garnetBoots = new ItemMoresArmor(16529, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 3)6, 3).setUnlocalizedName("garnetBoots").setCreativeTab(CreativeTabs.tabCombat);
+		alloyHelmet = new ItemMoresArmor(16535, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 0)7, 0).setUnlocalizedName("alloyHelmet").setCreativeTab(CreativeTabs.tabCombat);
+		alloyPlate = new ItemMoresArmor(16536, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 1)7, 1).setUnlocalizedName("alloyPlate").setCreativeTab(CreativeTabs.tabCombat);
+		alloyLeggings = new ItemMoresArmor(16537, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 2)7, 2).setUnlocalizedName("alloyLeggings").setCreativeTab(CreativeTabs.tabCombat);
+		alloyBoots = new ItemMoresArmor(16538, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 3)7, 3).setUnlocalizedName("alloyBoots").setCreativeTab(CreativeTabs.tabCombat);
+		osmiumHelmet = new ItemMoresArmor(17005, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 0)8, 0).setUnlocalizedName("osmiumHelmet").setCreativeTab(CreativeTabs.tabCombat);
+		osmiumPlate = new ItemMoresArmor(17006, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 1)8, 1).setUnlocalizedName("osmiumPlate").setCreativeTab(CreativeTabs.tabCombat);
+		osmiumLeggings = new ItemMoresArmor(17007, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 2)8, 2).setUnlocalizedName("osmiumLeggings").setCreativeTab(CreativeTabs.tabCombat);
+		osmiumBoots = new ItemMoresArmor(17008, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 3)8, 3).setUnlocalizedName("osmiumBoots").setCreativeTab(CreativeTabs.tabCombat);
 		
 		//Powder Definitions
-		amethystPowder = new ItemPowder(17016, 0).setIconCoord(13, 0).setUnlocalizedName("amethystPowder").setCreativeTab(CreativeTabs.tabMaterials);
-		peridotPowder = new ItemPowder(17017, 1).setIconCoord(14, 0).setUnlocalizedName("peridotPowder").setCreativeTab(CreativeTabs.tabMaterials);
-		garnetPowder = new ItemPowder(17018, 2).setIconCoord(15, 0).setUnlocalizedName("garnetPowder").setCreativeTab(CreativeTabs.tabMaterials);
+		amethystPowder = new ItemPowder(17016, 0)13, 0).setUnlocalizedName("amethystPowder").setCreativeTab(CreativeTabs.tabMaterials);
+		peridotPowder = new ItemPowder(17017, 1)14, 0).setUnlocalizedName("peridotPowder").setCreativeTab(CreativeTabs.tabMaterials);
+		garnetPowder = new ItemPowder(17018, 2)15, 0).setUnlocalizedName("garnetPowder").setCreativeTab(CreativeTabs.tabMaterials);
 		
 		//Food Definitions
-		amethystRockCandy = new ItemRockCandy(17100, 3, -0.2F, false, 0).setUnlocalizedName("amethystRockCandy").setIconCoord(13, 15);
-		peridotRockCandy = new ItemRockCandy(17101, 3, -0.2F, false, 1).setUnlocalizedName("peridotRockCandy").setIconCoord(14, 15);
-		garnetRockCandy = new ItemRockCandy(17102, 3, -0.2F, false, 2).setUnlocalizedName("garnetRockCandy").setIconCoord(15, 15);
-		rawGemMeat = new ItemMoresMeat(17110, 4, 0.8F, true, 1).setUnlocalizedName("rawGemMeat").setIconCoord(14, 14);
-		cookedGemMeat = new ItemMoresMeat(17111, 6, 1.1F, true).setUnlocalizedName("cookedGemMeat").setIconCoord(15, 14);
+		amethystRockCandy = new ItemRockCandy(17100, 3, -0.2F, false, 0).setUnlocalizedName("amethystRockCandy")13, 15);
+		peridotRockCandy = new ItemRockCandy(17101, 3, -0.2F, false, 1).setUnlocalizedName("peridotRockCandy")14, 15);
+		garnetRockCandy = new ItemRockCandy(17102, 3, -0.2F, false, 2).setUnlocalizedName("garnetRockCandy")15, 15);
+		rawGemMeat = new ItemMoresMeat(17110, 4, 0.8F, true, 1).setUnlocalizedName("rawGemMeat")14, 14);
+		cookedGemMeat = new ItemMoresMeat(17111, 6, 1.1F, true).setUnlocalizedName("cookedGemMeat")15, 14);
 		*/
 		
-		desertGem = (new BiomeGenBeachGem(GDTID)).setBiomeName("Gem Desert").setDisableRain().setTemperatureRainfall(2.0F, 0.0F).setMinMaxHeight(0.1F, 0.2F);
-	    extremeHillsGem = (new BiomeGenHillsGem(GHLID)).setBiomeName("Extreme Gem Hills").setMinMaxHeight(0.3F, 1.5F).setTemperatureRainfall(0.2F, 0.3F);
+		/*desertGem = (new BiomeGenBeachGem(GDTID)).setBiomeName("Gem Desert").setDisableRain().setTemperatureRainfall(2.0F, 0.0F).setMinMaxHeight(0.1F, 0.2F);
+	    extremeHillsGem = (new BiomeGenHillsGem(GHLID)).setBiomeName("Extreme Gem Hills").setMinMaxHeight(0.3F, 1.5F).setTemperatureRainfall(0.2F, 0.3F);*/
 		
 		this.moddedBlocks();
 		this.moddedMisc();
@@ -233,93 +233,93 @@ public class mod_Amethyst {
 	}
 	
 	//Gem and Ingot Definitions
-	public static Item amethyst = new ItemGem(16384, 1).setIconIndex(0).setUnlocalizedName("amethyst").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item peridot = new ItemGem(16385, 2).setIconIndex(1).setUnlocalizedName("peridot").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item garnet = new ItemGem(16386, 3).setIconIndex(2).setUnlocalizedName("garnet").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item amethystIngot = new ItemGem(16387).setIconIndex(16).setUnlocalizedName("amethystIngot").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item peridotIngot = new ItemGem(16388).setIconIndex(17).setUnlocalizedName("peridotIngot").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item garnetIngot = new ItemGem(16389).setIconIndex(18).setUnlocalizedName("garnetIngot").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item gemAlloyIngot = new ItemGem(16390).setIconIndex(3).setUnlocalizedName("gemAlloyIngot").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item berylliteIngot = new ItemGem(16391).setIconIndex(19).setUnlocalizedName("berylliteIngot").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item lapisIngot = new ItemGem(16544).setIconIndex(116).setUnlocalizedName("lapisIngot").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item amethyst = new ItemGem(16384, 1).setUnlocalizedName("amethyst").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item peridot = new ItemGem(16385, 2).setUnlocalizedName("peridot").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item garnet = new ItemGem(16386, 3).setUnlocalizedName("garnet").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item amethystIngot = new ItemGem(16387).setUnlocalizedName("amethystIngot").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item peridotIngot = new ItemGem(16388).setUnlocalizedName("peridotIngot").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item garnetIngot = new ItemGem(16389).setUnlocalizedName("garnetIngot").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item gemAlloyIngot = new ItemGem(16390).setUnlocalizedName("gemAlloyIngot").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item berylliteIngot = new ItemGem(16391).setUnlocalizedName("berylliteIngot").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item lapisIngot = new ItemGem(16544).setUnlocalizedName("lapisIngot").setCreativeTab(CreativeTabs.tabMaterials);
 	
 	//Metal Definitions
 	@Deprecated
-	public static Item osmiumNugget = new ItemGem(16539).setIconIndex(112).setUnlocalizedName("osmiumNugget").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item osmiumStone = new ItemOsmiumStone(16540).setIconIndex(113).setUnlocalizedName("osmiumStone").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item osmiumUntemperedIngot = new ItemGem(16541).setIconIndex(114).setUnlocalizedName("osmiumUntemperedIngot").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item osmiumIngot = new ItemGem(16542).setIconIndex(115).setUnlocalizedName("osmiumIngot").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item platinumIngot = new ItemGem(16543).setIconIndex(112).setUnlocalizedName("platinumIngot").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item osmiumNugget = new ItemGem(16539).setUnlocalizedName("osmiumNugget").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item osmiumStone = new ItemOsmiumStone(16540).setUnlocalizedName("osmiumStone").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item osmiumUntemperedIngot = new ItemGem(16541).setUnlocalizedName("osmiumUntemperedIngot").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item osmiumIngot = new ItemGem(16542).setUnlocalizedName("osmiumIngot").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item platinumIngot = new ItemGem(16543).setUnlocalizedName("platinumIngot").setCreativeTab(CreativeTabs.tabMaterials);
 	
 	//Tool Definitions
-	public static Item amethystSword = new ItemMoresSword(16515, EnumBaseMoresToolMat).setIconCoord(0, 6).setUnlocalizedName("amethystSword").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item peridotSword = new ItemMoresSword(16520, EnumBaseMoresToolMat).setIconCoord(1, 6).setUnlocalizedName("peridotSword").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item garnetSword = new ItemMoresSword(16525, EnumBaseMoresToolMat).setIconCoord(2, 6).setUnlocalizedName("garnetSword").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item amethystShovel = new ItemMoresSpade(16500, EnumBaseMoresToolMat).setIconCoord(0, 5).setUnlocalizedName("amethystShovel").setCreativeTab(CreativeTabs.tabTools);
-	public static Item peridotShovel = new ItemMoresSpade(16504, EnumBaseMoresToolMat).setIconCoord(1, 5).setUnlocalizedName("peridotShovel").setCreativeTab(CreativeTabs.tabTools);
-	public static Item garnetShovel = new ItemMoresSpade(16508, EnumBaseMoresToolMat).setIconCoord(2, 5).setUnlocalizedName("garnetShovel").setCreativeTab(CreativeTabs.tabTools);
-	public static Item amethystPickaxe = new ItemMoresPickaxe(16501, EnumBaseMoresToolMat).setIconCoord(0, 4).setUnlocalizedName("amethystPickaxe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item peridotPickaxe = new ItemMoresPickaxe(16505, EnumBaseMoresToolMat).setIconCoord(1, 4).setUnlocalizedName("peridotPickaxe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item garnetPickaxe = new ItemMoresPickaxe(16509, EnumBaseMoresToolMat).setIconCoord(2, 4).setUnlocalizedName("garnetPickaxe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item amethystAxe = new ItemMoresAxe(16502, EnumBaseMoresToolMat).setIconCoord(0, 2).setUnlocalizedName("amethystAxe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item peridotAxe = new ItemMoresAxe(16506, EnumBaseMoresToolMat).setIconCoord(1, 2).setUnlocalizedName("peridotAxe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item garnetAxe = new ItemMoresAxe(16510, EnumBaseMoresToolMat).setIconCoord(2, 2).setUnlocalizedName("garnetAxe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item amethystHoe = new ItemMoresHoe(16503, EnumBaseMoresToolMat).setIconCoord(0, 3).setUnlocalizedName("amethystHoe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item peridotHoe = new ItemMoresHoe(16507, EnumBaseMoresToolMat).setIconCoord(1, 3).setUnlocalizedName("peridotHoe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item garnetHoe = new ItemMoresHoe(16511, EnumBaseMoresToolMat).setIconCoord(2, 3).setUnlocalizedName("garnetHoe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item alloySword = new ItemMoresSword(16530, EnumAlloyToolMat).setIconCoord(3, 6).setUnlocalizedName("alloySword").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item alloyShovel = new ItemMoresSpade(16531, EnumAlloyToolMat).setIconCoord(3, 5).setUnlocalizedName("alloyShovel").setCreativeTab(CreativeTabs.tabTools);
-	public static Item alloyPickaxe = new ItemMoresPickaxe(16532, EnumAlloyToolMat).setIconCoord(3, 4).setUnlocalizedName("alloyPickaxe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item alloyAxe = new ItemMoresAxe(16533, EnumAlloyToolMat).setIconCoord(3, 2).setUnlocalizedName("alloyAxe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item alloyHoe = new ItemMoresHoe(16534, EnumAlloyToolMat).setIconCoord(3, 3).setUnlocalizedName("alloyHoe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item osmiumSword = new ItemMoresSword(17000, EnumOsmiumToolMat).setIconCoord(0, 8).setUnlocalizedName("osmiumSword").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item osmiumShovel = new ItemMoresSpade(17001, EnumOsmiumToolMat).setIconCoord(0, 9).setUnlocalizedName("osmiumShovel").setCreativeTab(CreativeTabs.tabTools);
-	public static Item osmiumPickaxe = new ItemMoresPickaxe(17002, EnumOsmiumToolMat).setIconCoord(0, 10).setUnlocalizedName("osmiumPickaxe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item osmiumAxe = new ItemMoresAxe(17003, EnumOsmiumToolMat).setIconCoord(0, 11).setUnlocalizedName("osmiumAxe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item osmiumHoe = new ItemMoresHoe(17004, EnumOsmiumToolMat).setIconCoord(0, 12).setUnlocalizedName("osmiumHoe").setCreativeTab(CreativeTabs.tabTools);
-	public static Item platinumLapisSword = new ItemPlatinumSword(17023, EnumPlatinumToolMat).setIconCoord(1, 8).setUnlocalizedName("platinumLapisSword").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item amethystSword = new ItemMoresSword(16515, EnumBaseMoresToolMat).setUnlocalizedName("amethystSword").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item peridotSword = new ItemMoresSword(16520, EnumBaseMoresToolMat).setUnlocalizedName("peridotSword").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item garnetSword = new ItemMoresSword(16525, EnumBaseMoresToolMat).setUnlocalizedName("garnetSword").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item amethystShovel = new ItemMoresSpade(16500, EnumBaseMoresToolMat).setUnlocalizedName("amethystShovel").setCreativeTab(CreativeTabs.tabTools);
+	public static Item peridotShovel = new ItemMoresSpade(16504, EnumBaseMoresToolMat).setUnlocalizedName("peridotShovel").setCreativeTab(CreativeTabs.tabTools);
+	public static Item garnetShovel = new ItemMoresSpade(16508, EnumBaseMoresToolMat).setUnlocalizedName("garnetShovel").setCreativeTab(CreativeTabs.tabTools);
+	public static Item amethystPickaxe = new ItemMoresPickaxe(16501, EnumBaseMoresToolMat).setUnlocalizedName("amethystPickaxe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item peridotPickaxe = new ItemMoresPickaxe(16505, EnumBaseMoresToolMat).setUnlocalizedName("peridotPickaxe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item garnetPickaxe = new ItemMoresPickaxe(16509, EnumBaseMoresToolMat).setUnlocalizedName("garnetPickaxe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item amethystAxe = new ItemMoresAxe(16502, EnumBaseMoresToolMat).setUnlocalizedName("amethystAxe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item peridotAxe = new ItemMoresAxe(16506, EnumBaseMoresToolMat).setUnlocalizedName("peridotAxe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item garnetAxe = new ItemMoresAxe(16510, EnumBaseMoresToolMat).setUnlocalizedName("garnetAxe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item amethystHoe = new ItemMoresHoe(16503, EnumBaseMoresToolMat).setUnlocalizedName("amethystHoe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item peridotHoe = new ItemMoresHoe(16507, EnumBaseMoresToolMat).setUnlocalizedName("peridotHoe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item garnetHoe = new ItemMoresHoe(16511, EnumBaseMoresToolMat).setUnlocalizedName("garnetHoe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item alloySword = new ItemMoresSword(16530, EnumAlloyToolMat).setUnlocalizedName("alloySword").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item alloyShovel = new ItemMoresSpade(16531, EnumAlloyToolMat).setUnlocalizedName("alloyShovel").setCreativeTab(CreativeTabs.tabTools);
+	public static Item alloyPickaxe = new ItemMoresPickaxe(16532, EnumAlloyToolMat).setUnlocalizedName("alloyPickaxe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item alloyAxe = new ItemMoresAxe(16533, EnumAlloyToolMat).setUnlocalizedName("alloyAxe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item alloyHoe = new ItemMoresHoe(16534, EnumAlloyToolMat).setUnlocalizedName("alloyHoe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item osmiumSword = new ItemMoresSword(17000, EnumOsmiumToolMat).setUnlocalizedName("osmiumSword").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item osmiumShovel = new ItemMoresSpade(17001, EnumOsmiumToolMat).setUnlocalizedName("osmiumShovel").setCreativeTab(CreativeTabs.tabTools);
+	public static Item osmiumPickaxe = new ItemMoresPickaxe(17002, EnumOsmiumToolMat).setUnlocalizedName("osmiumPickaxe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item osmiumAxe = new ItemMoresAxe(17003, EnumOsmiumToolMat).setUnlocalizedName("osmiumAxe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item osmiumHoe = new ItemMoresHoe(17004, EnumOsmiumToolMat).setUnlocalizedName("osmiumHoe").setCreativeTab(CreativeTabs.tabTools);
+	public static Item platinumLapisSword = new ItemPlatinumSword(17023, EnumPlatinumToolMat).setUnlocalizedName("platinumLapisSword").setCreativeTab(CreativeTabs.tabCombat);
 	
 	//Armor Definitions
-	public static Item amethystHelmet = new ItemMoresArmor(16516, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 0).setIconCoord(4, 0).setUnlocalizedName("amethystHelmet").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item amethystPlate = new ItemMoresArmor(16517, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 1).setIconCoord(4, 1).setUnlocalizedName("amethystPlate").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item amethystLeggings = new ItemMoresArmor(16518, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 2).setIconCoord(4, 2).setUnlocalizedName("amethystLeggings").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item amethystBoots = new ItemMoresArmor(16519, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 3).setIconCoord(4, 3).setUnlocalizedName("amethystBoots").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item peridotHelmet = new ItemMoresArmor(16521, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 0).setIconCoord(5, 0).setUnlocalizedName("peridotHelmet").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item peridotPlate = new ItemMoresArmor(16522, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 1).setIconCoord(5, 1).setUnlocalizedName("peridotPlate").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item peridotLeggings = new ItemMoresArmor(16523, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 2).setIconCoord(5, 2).setUnlocalizedName("peridotLeggings").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item peridotBoots = new ItemMoresArmor(16524, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 3).setIconCoord(5, 3).setUnlocalizedName("peridotBoots").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item garnetHelmet = new ItemMoresArmor(16526, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 0).setIconCoord(6, 0).setUnlocalizedName("garnetHelmet").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item garnetPlate = new ItemMoresArmor(16527, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 1).setIconCoord(6, 1).setUnlocalizedName("garnetPlate").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item garnetLeggings = new ItemMoresArmor(16528, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 2).setIconCoord(6, 2).setUnlocalizedName("garnetLeggings").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item garnetBoots = new ItemMoresArmor(16529, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 3).setIconCoord(6, 3).setUnlocalizedName("garnetBoots").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item alloyHelmet = new ItemMoresArmor(16535, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 0).setIconCoord(7, 0).setUnlocalizedName("alloyHelmet").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item alloyPlate = new ItemMoresArmor(16536, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 1).setIconCoord(7, 1).setUnlocalizedName("alloyPlate").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item alloyLeggings = new ItemMoresArmor(16537, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 2).setIconCoord(7, 2).setUnlocalizedName("alloyLeggings").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item alloyBoots = new ItemMoresArmor(16538, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 3).setIconCoord(7, 3).setUnlocalizedName("alloyBoots").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item osmiumHelmet = new ItemMoresArmor(17005, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 0).setIconCoord(8, 0).setUnlocalizedName("osmiumHelmet").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item osmiumPlate = new ItemMoresArmor(17006, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 1).setIconCoord(8, 1).setUnlocalizedName("osmiumPlate").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item osmiumLeggings = new ItemMoresArmor(17007, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 2).setIconCoord(8, 2).setUnlocalizedName("osmiumLeggings").setCreativeTab(CreativeTabs.tabCombat);
-	public static Item osmiumBoots = new ItemMoresArmor(17008, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 3).setIconCoord(8, 3).setUnlocalizedName("osmiumBoots").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item amethystHelmet = new ItemMoresArmor(16516, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 0).setUnlocalizedName("amethystHelmet").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item amethystPlate = new ItemMoresArmor(16517, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 1).setUnlocalizedName("amethystPlate").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item amethystLeggings = new ItemMoresArmor(16518, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 2).setUnlocalizedName("amethystLeggings").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item amethystBoots = new ItemMoresArmor(16519, EnumBaseMoresArmorMat, ModLoader.addArmor("amethyst"), 3).setUnlocalizedName("amethystBoots").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item peridotHelmet = new ItemMoresArmor(16521, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 0).setUnlocalizedName("peridotHelmet").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item peridotPlate = new ItemMoresArmor(16522, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 1).setUnlocalizedName("peridotPlate").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item peridotLeggings = new ItemMoresArmor(16523, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 2).setUnlocalizedName("peridotLeggings").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item peridotBoots = new ItemMoresArmor(16524, EnumBaseMoresArmorMat, ModLoader.addArmor("peridot"), 3).setUnlocalizedName("peridotBoots").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item garnetHelmet = new ItemMoresArmor(16526, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 0).setUnlocalizedName("garnetHelmet").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item garnetPlate = new ItemMoresArmor(16527, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 1).setUnlocalizedName("garnetPlate").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item garnetLeggings = new ItemMoresArmor(16528, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 2).setUnlocalizedName("garnetLeggings").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item garnetBoots = new ItemMoresArmor(16529, EnumBaseMoresArmorMat, ModLoader.addArmor("garnet"), 3).setUnlocalizedName("garnetBoots").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item alloyHelmet = new ItemMoresArmor(16535, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 0).setUnlocalizedName("alloyHelmet").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item alloyPlate = new ItemMoresArmor(16536, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 1).setUnlocalizedName("alloyPlate").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item alloyLeggings = new ItemMoresArmor(16537, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 2).setUnlocalizedName("alloyLeggings").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item alloyBoots = new ItemMoresArmor(16538, EnumAlloyArmorMat, ModLoader.addArmor("alloy"), 3).setUnlocalizedName("alloyBoots").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item osmiumHelmet = new ItemMoresArmor(17005, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 0).setUnlocalizedName("osmiumHelmet").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item osmiumPlate = new ItemMoresArmor(17006, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 1).setUnlocalizedName("osmiumPlate").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item osmiumLeggings = new ItemMoresArmor(17007, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 2).setUnlocalizedName("osmiumLeggings").setCreativeTab(CreativeTabs.tabCombat);
+	public static Item osmiumBoots = new ItemMoresArmor(17008, EnumAlloyArmorMat, ModLoader.addArmor("osmium"), 3).setUnlocalizedName("osmiumBoots").setCreativeTab(CreativeTabs.tabCombat);
 	
 	//Powder Definitions
-	public static Item amethystPowder = new ItemPowder(17016, 0).setIconCoord(13, 0).setUnlocalizedName("amethystPowder").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item peridotPowder = new ItemPowder(17017, 1).setIconCoord(14, 0).setUnlocalizedName("peridotPowder").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item garnetPowder = new ItemPowder(17018, 2).setIconCoord(15, 0).setUnlocalizedName("garnetPowder").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item beryllaniumPowder = new ItemPowder(17019, 3).setIconCoord(13, 1).setUnlocalizedName("beryllaniumPowder").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item osmiumPowder = new ItemPowder(17020, 4).setIconCoord(14, 1).setUnlocalizedName("osmiumPowder").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item goldPowder = new ItemPowder(17021, 5).setIconCoord(13, 1).setUnlocalizedName("goldPowder").setCreativeTab(CreativeTabs.tabMaterials);
-	public static Item diamondPowder = new ItemPowder(17022, 5).setIconCoord(13, 1).setUnlocalizedName("diamondPowder").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item amethystPowder = new ItemPowder(17016, 0).setUnlocalizedName("amethystPowder").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item peridotPowder = new ItemPowder(17017, 1).setUnlocalizedName("peridotPowder").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item garnetPowder = new ItemPowder(17018, 2).setUnlocalizedName("garnetPowder").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item beryllaniumPowder = new ItemPowder(17019, 3).setUnlocalizedName("beryllaniumPowder").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item osmiumPowder = new ItemPowder(17020, 4).setUnlocalizedName("osmiumPowder").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item goldPowder = new ItemPowder(17021, 5).setUnlocalizedName("goldPowder").setCreativeTab(CreativeTabs.tabMaterials);
+	public static Item diamondPowder = new ItemPowder(17022, 5).setUnlocalizedName("diamondPowder").setCreativeTab(CreativeTabs.tabMaterials);
 	
 	//Food Definitions
-	public static Item amethystRockCandy = new ItemRockCandy(17100, 3, -0.2F, false, 0).setUnlocalizedName("amethystRockCandy").setIconCoord(13, 15);
-	public static Item peridotRockCandy = new ItemRockCandy(17101, 3, -0.2F, false, 1).setUnlocalizedName("peridotRockCandy").setIconCoord(14, 15);
-	public static Item garnetRockCandy = new ItemRockCandy(17102, 3, -0.2F, false, 2).setUnlocalizedName("garnetRockCandy").setIconCoord(15, 15);
-	public static Item rawGemMeat = new ItemMoresMeat(17110, 4, 0.8F, true, 1).setUnlocalizedName("rawGemMeat").setIconCoord(14, 14);
-	public static Item cookedGemMeat = new ItemMoresMeat(17111, 6, 1.1F, true).setUnlocalizedName("cookedGemMeat").setIconCoord(15, 14);
+	public static Item amethystRockCandy = new ItemRockCandy(17100, 3, -0.2F, false, 0).setUnlocalizedName("amethystRockCandy");
+	public static Item peridotRockCandy = new ItemRockCandy(17101, 3, -0.2F, false, 1).setUnlocalizedName("peridotRockCandy");
+	public static Item garnetRockCandy = new ItemRockCandy(17102, 3, -0.2F, false, 2).setUnlocalizedName("garnetRockCandy");
+	public static Item rawGemMeat = new ItemMoresMeat(17110, 4, 0.8F, true, 1).setUnlocalizedName("rawGemMeat");
+	public static Item cookedGemMeat = new ItemMoresMeat(17111, 6, 1.1F, true).setUnlocalizedName("cookedGemMeat");
 	
-	public static Item osmiumOrePic = new ItemIcon(21095).setIconIndex(14);
-	public static Item beryllaniumOrePic = new ItemIcon(21096).setIconIndex(19);
-	public static Item platinumOrePic = new ItemIcon(21097).setIconIndex(20);
+	public static Item osmiumOrePic = new ItemIcon(21095);
+	public static Item beryllaniumOrePic = new ItemIcon(21096);
+	public static Item platinumOrePic = new ItemIcon(21097);
 	
 	//Biome Definitions
 	//public static BiomeGenBase forestGem = (new BiomeGenForestGem(30)).setBiomeName("Gem Forest").setTemperatureRainfall(0.7F, 0.8F);
@@ -351,14 +351,14 @@ public class mod_Amethyst {
 		GameRegistry.registerBlock(amethystBlock);
 		GameRegistry.registerBlock(peridotBlock);
 		GameRegistry.registerBlock(garnetBlock);
-		GameRegistry.registerBlock(gemSand);
+		/*GameRegistry.registerBlock(gemSand);
 		GameRegistry.registerBlock(gemDirt);
 		GameRegistry.registerBlock(gemGrass);
 		GameRegistry.registerBlock(gemLog);
 		GameRegistry.registerBlock(gemLeaves);
-		GameRegistry.registerBlock(gemSapling);
+		GameRegistry.registerBlock(gemSapling);*/
 		GameRegistry.registerBlock(osmiumOre);
-		GameRegistry.registerBlock(gemTallGrass);
+		//GameRegistry.registerBlock(gemTallGrass);
 		GameRegistry.registerBlock(osmiumBlock);
 		GameRegistry.registerBlock(beryllaniumBlock);
 		GameRegistry.registerBlock(beryllaniumOre);
@@ -372,13 +372,13 @@ public class mod_Amethyst {
 		MinecraftForge.setBlockHarvestLevel(amethystBlock, "pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(peridotBlock, "pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(garnetBlock, "pickaxe", 2);
-		MinecraftForge.setBlockHarvestLevel(gemSand, "shovel", 0);
+		/*MinecraftForge.setBlockHarvestLevel(gemSand, "shovel", 0);
 		MinecraftForge.setBlockHarvestLevel(gemDirt, "shovel", 0);
 		MinecraftForge.setBlockHarvestLevel(gemGrass, "shovel", 0);
 		MinecraftForge.setBlockHarvestLevel(gemLog, "axe", 0);
 		MinecraftForge.setBlockHarvestLevel(gemLeaves, "sword", 0);
 		MinecraftForge.setBlockHarvestLevel(gemSapling, "sword", 0);
-		MinecraftForge.setBlockHarvestLevel(gemTallGrass, "sword", 0);
+		MinecraftForge.setBlockHarvestLevel(gemTallGrass, "sword", 0);*/
 		MinecraftForge.setBlockHarvestLevel(osmiumOre, "pickaxe", 3);
 		MinecraftForge.setBlockHarvestLevel(osmiumBlock, "pickaxe", 3);
 		MinecraftForge.setBlockHarvestLevel(beryllaniumOre, "pickaxe", 3);
@@ -758,7 +758,7 @@ public class mod_Amethyst {
 			System.out.println("Month: December");
 		}
 		
-		System.out.println("Gem Dirt ID: " + this.gemDirt.blockID);
+		/*System.out.println("Gem Dirt ID: " + this.gemDirt.blockID);*/
 	}
 	
 	//Adding Recipes

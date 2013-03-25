@@ -14,43 +14,43 @@ public class ItemMoresArmor extends ItemArmor implements IArmorTextureProvider
     
     public String getArmorTextureFile(ItemStack par1)
     {
-    	if (par1.itemID == mod_Amethyst.alloyHelmet.shiftedIndex || par1.itemID == mod_Amethyst.alloyPlate.shiftedIndex || par1.itemID == mod_Amethyst.alloyBoots.shiftedIndex)
+    	if (par1.itemID == mod_Amethyst.alloyHelmet.itemID || par1.itemID == mod_Amethyst.alloyPlate.itemID || par1.itemID == mod_Amethyst.alloyBoots.itemID)
     	{
     		return "/armor/alloy_1.png";
     	}
-    	if (par1.itemID == mod_Amethyst.alloyLeggings.shiftedIndex)
+    	if (par1.itemID == mod_Amethyst.alloyLeggings.itemID)
     	{
     		return "/armor/alloy_2.png";
     	}
-    	if (par1.itemID == mod_Amethyst.amethystHelmet.shiftedIndex || par1.itemID == mod_Amethyst.amethystPlate.shiftedIndex || par1.itemID == mod_Amethyst.amethystBoots.shiftedIndex)
+    	if (par1.itemID == mod_Amethyst.amethystHelmet.itemID || par1.itemID == mod_Amethyst.amethystPlate.itemID || par1.itemID == mod_Amethyst.amethystBoots.itemID)
     	{
     		return "/armor/amethyst_1.png";
     	}
-    	if (par1.itemID == mod_Amethyst.amethystLeggings.shiftedIndex)
+    	if (par1.itemID == mod_Amethyst.amethystLeggings.itemID)
     	{
     		return "/armor/amethyst_2.png";
     	}
-    	if (par1.itemID == mod_Amethyst.peridotHelmet.shiftedIndex || par1.itemID == mod_Amethyst.peridotPlate.shiftedIndex || par1.itemID == mod_Amethyst.peridotBoots.shiftedIndex)
+    	if (par1.itemID == mod_Amethyst.peridotHelmet.itemID || par1.itemID == mod_Amethyst.peridotPlate.itemID || par1.itemID == mod_Amethyst.peridotBoots.itemID)
     	{
     		return "/armor/peridot_1.png";
     	}
-    	if (par1.itemID == mod_Amethyst.peridotLeggings.shiftedIndex)
+    	if (par1.itemID == mod_Amethyst.peridotLeggings.itemID)
     	{
     		return "/armor/peridot_2.png";
     	}
-    	if (par1.itemID == mod_Amethyst.garnetHelmet.shiftedIndex || par1.itemID == mod_Amethyst.garnetPlate.shiftedIndex || par1.itemID == mod_Amethyst.garnetBoots.shiftedIndex)
+    	if (par1.itemID == mod_Amethyst.garnetHelmet.itemID || par1.itemID == mod_Amethyst.garnetPlate.itemID || par1.itemID == mod_Amethyst.garnetBoots.itemID)
     	{
     		return "/armor/garnet_1.png";
     	}
-    	if (par1.itemID == mod_Amethyst.garnetLeggings.shiftedIndex)
+    	if (par1.itemID == mod_Amethyst.garnetLeggings.itemID)
     	{
     		return "/armor/garnet_2.png";
     	}
-    	if (par1.itemID == mod_Amethyst.osmiumHelmet.shiftedIndex || par1.itemID == mod_Amethyst.osmiumPlate.shiftedIndex || par1.itemID == mod_Amethyst.osmiumBoots.shiftedIndex)
+    	if (par1.itemID == mod_Amethyst.osmiumHelmet.itemID || par1.itemID == mod_Amethyst.osmiumPlate.itemID || par1.itemID == mod_Amethyst.osmiumBoots.itemID)
     	{
     		return "/armor/osmium_1.png";
     	}
-    	if (par1.itemID == mod_Amethyst.osmiumLeggings.shiftedIndex)
+    	if (par1.itemID == mod_Amethyst.osmiumLeggings.itemID)
     	{
     		return "/armor/osmium_2.png";
     	}
@@ -58,10 +58,5 @@ public class ItemMoresArmor extends ItemArmor implements IArmorTextureProvider
     	{
     		return "/armor/diamond_1.png";
     	}
-    }
-    
-    public String getTextureFile()
-    {
-            return "/tex/dxmods/amethyst/items0.png";
     }
 }

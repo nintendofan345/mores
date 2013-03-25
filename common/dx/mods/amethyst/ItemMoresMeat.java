@@ -58,7 +58,7 @@ public class ItemMoresMeat extends ItemFood
         this(par1, par2, par3, par4, 0);
     }
 
-    public ItemStack onFoodEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
+    public ItemStack onEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
         --par1ItemStack.stackSize;
         par3EntityPlayer.getFoodStats().addStats(this);
@@ -145,10 +145,5 @@ public class ItemMoresMeat extends ItemFood
     {
         this.alwaysEdible = true;
         return this;
-    }
-    
-    public String getTextureFile()
-    {
-            return "/tex/dxmods/amethyst/items0.png";
     }
 }

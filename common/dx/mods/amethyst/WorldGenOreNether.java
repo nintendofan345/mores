@@ -69,7 +69,7 @@ public class WorldGenOreNether extends WorldGenerator
                                             double d14 = (((double)i3 + 0.5D) - d8) / (d10 / 2D);
                                             if (d12 * d12 + d13 * d13 + d14 * d14 < 1.0D && world.getBlockId(k2, l2, i3) == Block.netherrack.blockID)
                                             {
-                                                    world.setBlock(k2, l2, i3, minableBlockId);
+                                                    world.func_96440_m(k2, l2, i3, minableBlockId);
                                             }
                                     }
                             }
